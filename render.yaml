@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: duobet-football-api
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: API_FOOTBALL_KEY
+        sync: false
